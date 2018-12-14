@@ -33,18 +33,71 @@
 				</button>
 				<ul id="menu-links" class="dropdown">
 					<a href="index.html"><li class="boldlave">HOME</li></a>
-					<a href="about.html"><li class="boldlave">ABOUT</li></a>
 					<a href="musicreviews.html"><li class="boldlave">MUSIC REVIEWS</li></a>
 					<a href="musichistory.html"><li class="boldlave">MUSIC HISTORY</li></a>
 					<a href="miscrants.html"><li class="boldlave">MISC. RANTS</li></a>
 				</ul>
 			</nav>
+	
+<!--HEADER-->
+			<header id="slideshow">
+
+				<div class="slides fadeOut">
+					<div class="numOfnum">1 of 3</div>
+					<img src="images/drake-scorpion.jpg" style="width: 100%;">
+					<h1>DRAKE | SCORPION Review</h1>
+					<a class="readMore" href="reviews/drakescorpreview.html" target="_blank">Read More</a>
+				</div>
+
+				<div class="slides fadeOut">
+					<div class="numOfnum">2 of 3</div> 
+					<img src="images/maxresdefault.jpg" style="width: 100%;">
+					<h1>Labi Siffre vs. Dr. Dre</h1>
+					<a class="readMore" href="history/labisiffrehistory.html" target="_blank">Read More</a>
+				</div>
+
+				<div class="slides fadeOut">
+					<div class="numOfnum">3 of 3</div>
+					<img src="images/elon-musk-grimes.jpg" style="width: 100%;">
+					<h1> Let Grimes Date Elon Musk in Peace</h1>
+					<a href="rants/grimelonrant.html" target="_blank" class="readMore">Read More</a>
+				</div>
+
+				<a class="prevSlide" onclick="goSlide(-1)">&#10094;</a>
+  				<a class="nextSlide" onclick="goSlide(1)">&#10095;</a>
+			</header><br>
+
+			<div style="text-align: center;">
+				 <span class="circle" onclick="activeSlide(1)"></span> 
+  				 <span class="circle" onclick="activeSlide(2)"></span> 
+  				 <span class="circle" onclick="activeSlide(3)"></span> 
+			</div>	
+<!-- 
+			<section id="musichis"><h2 id="textslide">This Week in Music History<br/></h2>
+					
+			</section>	 -->		
 
 <!--MAIN-->
-			<main id="top">
+			<main id="top">			
 
 			
-<!--SECTIONS-->			
+<!--SECTIONS-->	
+
+				<!-- <section id="musichis" class="box">
+
+					<article>
+					<h2>This Week in Music History</h2><br/>
+					<a href="history/labisiffrehistory.html" target="_blank"><p class="boldlave">70s MUSIC GAVE BIRTH TO HIP-HOP</p></a><br/>
+					<a href="rants/grimelonrant.html" target="_blank"><p class="boldlave">LET GRIMES DATE ELON MUSK IN PEACE</p></a><br/>
+					<p>1983 September 17 -Vanessa Williams, as Miss New York, became the first black woman to be crowned Miss America. </p><br/>
+					<p>1985 September 19 -A U.S. Senate committee heard testimony on labeling and rating of rock music, initiated by the Parents Music Resource Center.</p><br/>
+					<p>1993 September 21 - Nirvana's album "In Utero" was released.</p><br/>
+
+					</article>
+				</section> -->
+
+
+
 				<a href="reviews/drakescorpreview.html" target="_blank"><section id="musicrev" class="box">
 
 					<article>
@@ -54,19 +107,6 @@
 
 				</section></a>
 
-				<section id="musichis" class="box">
-
-					<article>
-					<h2>Latest Posts</h2><br/>
-					<a href="history/labisiffrehistory.html" target="_blank"><p class="boldlave">70s MUSIC GAVE BIRTH TO HIP-HOP</p></a><br/>
-					<a href="rants/grimelonrant.html" target="_blank"><p class="boldlave">LET GRIMES DATE ELON MUSK IN PEACE</p></a><br/>
-					<h3>This Week in Music History</h3><br/>
-					<p>1983 September 17 -Vanessa Williams, as Miss New York, became the first black woman to be crowned Miss America. </p><br/>
-					<p>1985 September 19 -A U.S. Senate committee heard testimony on labeling and rating of rock music, initiated by the Parents Music Resource Center.</p><br/>
-					<p>1993 September 21 - Nirvana's album "In Utero" was released.</p><br/>
-
-					</article>
-				</section>
 
 				<section id="lreleases" class="box"> 
 
@@ -107,31 +147,61 @@
 
 				</section>
 
+			
+				<div id="songweek"> 
 
-				<section id="songweek" class="box"> 
-
-					<article>
-					<h2>Song of the Week</h2><br/>
+					<article class="feat-mus">
+					<h2 class="feat-title">Song of the Week</h2><br/>
 					<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/ABYnHjc08wI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-					<caption>DUCKWRTH "MICHUUL"</caption>
-					<div class="index-margin">
+					
+					</article>
+				</div>
+				<div class="index-margin">
 						<p>DUCKWRTH is an eccentric Los Angeles-based rapper and singer who grew up in South Central LA with an eclectic aesthetic and new-found acclaim from his 2017 mixtape <em>An Xtra Uugly Mixtape</em>. The song featured here, "MICHUUL", from his mixtape, is a dance track with a clear house-influence, reminiscent of Canadian artist Kaytranada's grooves with the distinct knocking, bouncy, atmospheric sound. DUCKWRTH rapidly counts off his aspirations to "shine like Michael" and get an "art school chick" smoothly as he dances and galavants in an open field. The song is a pastiche of past influences, but fuses those sounds and takes it into a direction of his own.</p> 
 					</div>
+			
+
+			
+
+				<div id="featrelease"> 
+
+					<article class="feat-mus">
+					<h2 class="feat-title">Featured Album Release</h2><br/>
+					<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Ph8ysJTIAWA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+					
 					</article>
-				</section>
+				</div>
 
-
-				<section id="featrelease" class="box"> 
-
-					<article>
-					<h2>Featured Album Release</h2><br/>
-					<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Ph8ysJTIAWA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe></div>
-					<caption>"Stack That Cheese," from Lupe Fiasco's latest release, <em>DROGAS WAVE</em></caption>
-					<div class="index-margin">
-						<p>Although I admit that I haven't been following Lupe much after <em>Food & Liquor II</em>, my love for him has not waned. <em>Food & Liquor</em> & <em>The Cool</em> were two excellent albums for an up-and-coming artist in hip-hop, and were a huge part of my adolescence. Now that DROGAS Waves is released, I look forward to examining the path he plans to take his music in. Lupe is very cerebral and conceptual with his work, and at times controversial with his public declarations, but we cannot deny his success and his talent. </p>
+				<div class="index-margin">
+						<p>Although I admit that I haven't been following Lupe much after <em>Food & Liquor II</em>, my love for him has not waned. <em>Food & Liquor</em> and <em>The Cool</em> were two excellent albums for an up-and-coming artist in hip-hop, and were a huge part of my adolescence. Now that DROGAS Waves is released, I look forward to examining the path he plans to take his music in. Lupe is very cerebral and conceptual with his work, and at times controversial with his public declarations, but we cannot deny his success and his talent. </p>
 					</div>
-					</article>
+
+				<div id="about-section" class=bottom-index">	
+					<section id="about">
+
+	
+					<h2>About 'The Soulful NonProphet'</h2><br/>
+					<p>This website is not:</p><br/>
+					<ul>
+						<li>Pitchfork</li>
+						<li>A scam</li>
+						<li>An ego echo chamber</li>
+						<li>Owned by any corporate entity</li>
+					</ul><br/>
+
+					<p class="bold">I'm a highly opinionated historian who
+					enjoys the more artistic things in life. I admire all 
+					forms of art, but music, to me, has the most impact.
+					I'm not here to preach, but to facilitate and guide one's 
+					knowledge of music.</p><br/>
+
+					<p> I'm not satisfied with just enjoying a song; I want to know where it came from. 'Why did the artist choose these words with this melody and this rhythm with these sounds?' Much of the popular music today is sampled or developed out of previous time periods, specifically the 1970s. Hip-Hop's greatest artists and
+					songs borrow from the era. The post punk revival of the early 2000s further provides evidence for my point. Not only do I enjoy listening to music and sharing what I like, I enjoy analyzing it. This website is my outlet. </p><br/>
+
+					<p>In the real world, I teach history and I study web development, and in my everyday life I do much of the things I enjoy. This includes listening to music and writing (hence the website),
+					reading non-fiction books, watching movies, dancing, practicing yoga and meditation, eating, and of course enjoying the company of great people.</p>
 				</section>
+			</div>	
 
 			</main>
 
@@ -141,8 +211,8 @@
 
 				<details>
 					<summary>&copy; 2018</summary>
-					<p> By The Soulful NonProphet. All Rights Reserved.</p>
-					<p> All written code, content, and opinions on this website are property of The Soulful NonProphet. <br/>
+					<p id="footer-text"> By The Soulful NonProphet. All Rights Reserved.</p>
+					<p id="footer-text"> All written code, content, and opinions on this website are property of The Soulful NonProphet. <br/>
 					Any external images, links, videos, and audio are not property of The Soulful NonProphet and are <br/>
 					used for educational and entertainment purposes only; not for sale or redistribution. <br/></p>
 				</details><br/>
@@ -170,6 +240,35 @@
 					$menuButton.toggleClass('close')
 				})
 			})
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function goSlide(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			// Thumbnail image controls
+			function activeSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("slides");
+			  var circle = document.getElementsByClassName("circle");
+			  if (n > slides.length) {slideIndex = 1} 
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none"; 
+			  }
+			  for (i = 0; i < circle.length; i++) {
+			      circle[i].className = circle[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block"; 
+			  circle[slideIndex-1].className += " active";
+			}
 		</script>
 
 	</body>

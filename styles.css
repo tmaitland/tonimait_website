@@ -27,8 +27,8 @@
 }
 
 @font-face{
-	font-family: 'Lobster';
-	src: url('fonts/Lobster-Regular.ttf') format('truetype');
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face{
@@ -40,6 +40,8 @@ p{
 	font-family: 'Alice', serif;
 	font-size: 16px;
 	text-align: left;
+	line-height: 2em;
+	color: #48284A;
 }
 
 a{
@@ -62,28 +64,50 @@ a:hover {
 
 
 
-h1, h2, h3, h4, h5, h6{
+ h2, h3, h4, h5, h6{
 	font-family:'Blessed';
 	color: #000;
 	text-shadow: 2px 2px #3A86FF;
 	letter-spacing: 1px;
+}
 
+h1{
+	font-family: 'Metamorphous';
+    position: relative;
+    top: -63px;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 ul li{
-	font-family: 'Alice', serif;
+	font-family: 'Alice';
+	text-align: center;
+	list-style-type: none;
+	color:  #8DD3F9;
 }
 
 
 body{
-	background-image: url('images/bkgrdimgsnp.png');
+	background-color: #fff;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
-article{
+article {
 	padding:20px;
 }
+
+/*Header slideshow on homepage*/
+/*#slideshow{
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-position: center;;
+	background-repeat: no-repeat;
+	padding-top: 200px;
+}*/
 
 /*Boxes on Homepage*/
 
@@ -96,27 +120,28 @@ article{
 	vertical-align: top;
 	margin: 10px;
 	margin-bottom: 50px;
+	border-radius: 15px;
 }
 
 .boldlave{
 	color: #9c87bf;
 	font-weight: bold;
+	font-family: 'Alice', cursive ;
 }
 
 /*Buttons at bottom of article*/
 .previous{
 	background-color: #9C87BF;
 	padding: 5px;
-	border: 3px solid black;
 	margin-top: 15px;
-	
+	color: white;
 }
 
 .next{
 	background-color: #9C87BF;
 	padding: 5px;
-	border: 3px solid black;
 	margin-top: 15px;
+	color: white;
 	
 }
 
@@ -129,9 +154,6 @@ article{
 	margin-bottom: 5px;
 }
 
-.index-margin{
-	padding-top: 20px;
-}
 
 /*Font formatting for article title*/
 .particle{
@@ -248,8 +270,6 @@ nav ul {
 	display: none;
 	list-style-type: none;
 	text-align: center;
-	/*text-shadow: 1px 1px #000;*/
-	letter-spacing: 2px;
 	background-color: #4B0082;
 	position: absolute;
 	width: 100%;
@@ -267,12 +287,125 @@ nav ul li{
 /*MAIN*/
 
 main{
-	padding-top: 120px;
-	padding-bottom: 300px;
+	padding-top: 60px;
 	text-align: center;
 }
 
 /*INDEX*/
+
+#slideshow{
+	width: 100%;
+	position: relative;
+	margin: auto;
+	height:230px;
+	padding-top: 35px;
+	}
+
+	.slides{
+		display: none;
+	}
+
+	.prevSlide, .nextSlide{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+
+	.nextSlide{
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	.prevSlide:hover, .nextSlide:hover {
+  		background-color: rgba(0,0,0,0.8);
+	}
+
+	.textcap{
+		color: #f2f2f2;
+  		font-size: 15px;
+ 		padding: 8px 12px;
+  		position: absolute;
+  		bottom: 8px;
+  		
+  		text-align: center;
+	}
+
+	.numOfnum{
+		color: #f2f2f2;
+  		font-size: 12px;
+  		padding: 8px 12px;
+  		position: absolute;
+  		top: 0;
+	}
+
+	.circle{
+		 cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+	}
+
+	.active, .circle:hover {
+  		background-color: #717171;
+	}
+
+	.fadeOut {
+	  -webkit-animation-name: fadeOut;
+	  -webkit-animation-duration: 2.5s;
+	  animation-name: fadeOut;
+	  animation-duration: 2.5s;
+	}
+	
+	@-webkit-keyframes fadeOut {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	@keyframes fadeOut {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	.readMore{
+		position: relative;	
+	    margin: 0 auto;
+	    top: -60px;
+	    text-decoration: none;
+	    color: white;
+	    border: 1px solid white;
+	    padding: 5px;
+	    letter-spacing: 1px;
+	    width: 100px;
+	    height: 30px;
+	    background-color: #4B0082;
+	    display: flex;
+  		align-items: center;
+  		justify-content: center;
+	}
+
+
+.index-heading{
+	font-family: 'Metamorphous', cursive;
+	color: white;
+	text-shadow: 2px 2px #3A86FF;
+	letter-spacing: 10px;
+    height: 315px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 #musicrev{
 	background-color: white;
@@ -286,9 +419,16 @@ main{
 	
 }
 
+.subheading{
+		width: 100%;
+		height: 100px;
+		background-color: purple;
+	}
+
 
 .albumIndex{
 	text-shadow: 1px 1px 2px black;
+	color: #ffffff;
 }
 
 #musicrev:hover {
@@ -296,11 +436,55 @@ main{
 	filter: alpha(opacity=80);
 }
 
-#musichis, #ureleases, #lreleases, #songweek, #featrelease {
+#musichis{
+	width: 100%;
+	height: 200px;
+}
+
+#ureleases, #lreleases, {
 	background-color: #8dd3d0;
-	-webkit-box-shadow: 5px 5px 5px #000;
+	word-wrap: break-word;
+	/*-webkit-box-shadow: 5px 5px 5px #000;*/
 
 }
+
+
+.index-margin{
+		display: flex;
+		flex-direction: column;
+		width: 280px;
+		height: auto;
+		margin: 0 auto;
+		margin-bottom: 50px;
+}
+
+.feat-mus{
+	width: 350px;
+	height: 250px;
+}
+
+
+#songweek, #featrelease {
+	flex: 0 0 440px;
+    margin: 20px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .feat-title{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+    text-align: center;
+    flex: 0 0 50%;
+ }
+
 
 #textreview, #textreview1, #texthistory, #texthistory1, #textrant {
 	/*border-radius: 10px;*/
@@ -337,15 +521,21 @@ height: 100%;
 /*ABOUT*/
 #about{
 	background-color: #9c87bf;
-	padding: 10px;
-	width: 250px;
-	height: 1175px; 
-	box-shadow: 1px 5px 5px;
-	
+	padding: 50px;
+	height: 1295px; 
+	margin-left: auto;
+	margin-right: auto;
 }
 
 p.bold{
 	font-weight: bold;
+}
+
+.bottom-index{
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -354,8 +544,8 @@ p.bold{
 	background-color: #8dd3d0;
 	box-shadow: 1px 5px 5px #000;
 	padding: 10px;
-	width: 210px;
-	height: 600px; 
+	width: 300px;
+	height: 610px; 
 	margin-bottom: 30px;
 	display: inline-block;
 	
@@ -376,9 +566,10 @@ p.bold{
 }
 
 #fitphoto1{
-	width:250px;
-	height: 250px;
-	float:left;
+	width:214px;
+	height: 214px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -432,8 +623,8 @@ blockquote:after {
 	background-color: #8dd3d0;
 	box-shadow: 1px 5px 5px #000;
 	padding: 10px;
-	width: 255px;
-	height: 570px; 
+	width: 300px;
+	height: 610px;
 	margin-bottom: 30px;
 	display: inline-block;
 	
@@ -454,9 +645,11 @@ blockquote:after {
 }
 
 #hisfitphoto1{
-	width:300px;
-	height: 250px;
-	float:left;
+	width: 248px;
+    height: 168px;
+    margin-left: auto;
+    margin-right: auto;
+	/*float:left;*/
 }
 
 .historyartpho{
@@ -473,8 +666,8 @@ blockquote:after {
 	background-color: #8dd3d0;
 	box-shadow: 1px 5px 5px #000;
 	padding: 10px;
-	width: 215px;
-	height: 565px;  
+	width: 300px;
+	height: 610px;  
 	margin-bottom: 30px;
 	display: inline-block;	
 }
@@ -494,9 +687,10 @@ blockquote:after {
 }
 
 #fitmiscphoto1{
-	width:300px;
-	height: 250px;
-	float:left;
+	width: 214px;
+    height: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -516,11 +710,14 @@ footer{
 	        box-sizing: border-box;
 	background-color:#4B0082;
 	text-shadow: 1px 1px #000;
-	font-weight: bold;
 	padding: 10px;
 	color: #9c87bf;
 	bottom:0;
 	width:100%;
+}
+
+#footer-text{
+	color: white;
 }
 
 summary{
@@ -543,7 +740,8 @@ summary{
 	}
 
 	main {
-		padding-top: 160px;
+		padding-top: 110px;
+		padding-bottom: 300px;
 	}
 }
 
@@ -551,9 +749,213 @@ summary{
 
 /*Desktop Styles*/
 @media all and (min-width: 1024px) {
+
+	h1{
+	font-family: 'Metamorphous';
+    position: relative;
+    top: -188px;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px black;
+    font-size: 35px;
+	}
+
+	#slideshow{
+	width: 100%;
+	position: relative;
+	margin: auto;
+	height: 800px;
+	}
+
+	.slides{
+		display: none;
+	}
+
+	.readMore{
+		position: relative;	
+	    margin: 0 auto;
+	    top: -168px;
+	    text-decoration: none;
+	    color: white;
+	    border: 1px solid white;
+	    padding: 15px;
+	    letter-spacing: 2px;
+	    width: 100px;
+	    height: 15px;
+	    background-color: #4B0082;
+	    text-align: center;
+	     display: flex;
+  		align-items: center;
+  		justify-content: center;
+	}
+
+	.prevSlide, .nextSlide{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+
+	.nextSlide{
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	.prevSlide:hover, .nextSlide:hover {
+  		background-color: rgba(0,0,0,0.8);
+	}
+
+	.textcap{
+		color: #f2f2f2;
+  		font-size: 15px;
+ 		padding: 8px 12px;
+  		position: absolute;
+  		bottom: 8px;
+  		width: 100%;
+  		text-align: center;
+	}
+
+	.numOfnum{
+		color: #f2f2f2;
+  		font-size: 12px;
+  		padding: 8px 12px;
+  		position: absolute;
+  		top: 0;
+	}
+
+	.circle{
+		 cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+	}
+
+	.active, .circle:hover {
+  		background-color: #717171;
+	}
+
+	.fadeOut {
+	  -webkit-animation-name: fadeOut;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fadeOut;
+	  animation-duration: 1.5s;
+	}
+	
+	@-webkit-keyframes fadeOut {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	@keyframes fadeOut {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+
+
+
+	.subheading{
+		width: 100%;
+		height: 200px;
+	
+	}
+
+	.index-heading{
+	font-family: 'Metamorphous', cursive;
+	color: white;
+	text-shadow: 2px 2px #3A86FF;
+	letter-spacing: 20px;
+    height: 630px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+	#musichis{
+		width: 100%;
+		height: 300px;
+	}
+
+	#hisfitphoto1{
+	width: 277px;
+    height: 172px;
+	float:left;
+	}
+
+	#fitphoto1{
+	width:244px;
+	height: 250px;
+	float:left;
+	}
+
+	#fitmiscphoto1{
+	width: 260px;
+    height: 255px;
+	float:left;
+	}
+
+	#miscphoto1{
+	width: 222px;
+    height: 175px;
+	float:left;
+	-webkit-box-shadow: 5px 5px black;
+	        box-shadow: 5px 5px black;
+	margin-right: 15px;
+	margin-top: 15px;
+	}
+
 	.box {
 		width: 400px;
 	}
+
+	.index-margin{
+		display: flex;
+		flex-direction: row;
+		width: 600px;
+		height: auto;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+
+	.feat-mus{
+	width: 600px;
+	height: 330px;
+	margin: 20px;
+	}
+
+	#songweek, #featrelease {
+	flex: 0 0 440px;
+    margin: 20px;
+    height: auto;
+    /*overflow: hidden;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 	}
+
+ 	.feat-title{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+    text-align: center;
+    flex: 0 0 100%;
+    font-size: 30px;
+ 	}
 
 
 	#musicrev {
@@ -561,7 +963,7 @@ summary{
 	}
 
 
-	#musichis, #lreleases, #ureleases{
+	 #lreleases, #ureleases{
 		height: 415px;
 	}
 
@@ -571,28 +973,42 @@ summary{
 	}
 
 	#reviewsmus1{
-		width: 600px;
-	   	height: 250px; 
+		width: 610px;
+	   	height: 300px; 
 	}
 
 	#historymus1{
-		width: 600px;
-		height: 275px; 
+		width: 610px;
+	   	height: 300px;
 	}
 
 	#musicnews{
-		width: 600px;
-		height: 220px; 
+		width: 610px;
+		height: 300px; 
 	}
 
 	#miscrants1{
-		width: 600px;
-		height: 250px; 
+		width: 610px;
+		height: 300px; 
 	}
 
 	#about{
-		width: 550px;
-		height: 700px; 
+		width: 600px;
+		padding: 50px;
+		height: 800px;
+		border-radius: 15px;
+		background-color: white;
+		border:  1px solid rgb(95,95,95, 0.25);
+	}
+
+	#about-section{
+	background-color: rgb(95,95,95, 0.25);
+	width: 600px;
+	padding: 50px;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
 	}
 
 	#textreview, #textreview1{
@@ -646,10 +1062,10 @@ summary{
 
 	nav ul {
 		display: block;
-		text-align: right;.
-		background-color: #252323;
+		text-align: right;
+		background-color: #4B0082;
 		position: relative;
-		width: 70%;
+		width: 50%;
 		margin-left: auto;
 		padding: 10px;
 	}
